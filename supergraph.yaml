@@ -1,0 +1,14 @@
+federation_version: =2.3.2
+subgraphs:
+  owners:
+    routing_url: http://localhost:8080/graphql
+    schema:
+      file: ./owners-subgraph/src/main/resources/graphql/schema.graphqls
+  pets:
+    routing_url: http://localhost:8081/graphql
+    schema:
+      file: ./pets-subgraph/src/main/resources/graphql/schema.graphqls
+  walks:
+    routing_url: http://localhost:8082/graphql
+    schema:
+      file: ./walks-subgraph/src/main/resources/graphql/schema.graphqls

@@ -1,0 +1,11 @@
+type Owner @key(fields: "petsIds") @extends {
+    petsIds: [ID!] @external
+    pets:[Pet!]!
+}
+
+type Pet @key(fields: "walksIds") {
+    id: ID!
+    name: String
+    animal: String
+    walksIds: [ID!]
+}

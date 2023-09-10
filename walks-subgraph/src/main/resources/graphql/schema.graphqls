@@ -1,0 +1,11 @@
+type Pet @extends @key(fields: "walksIds") {
+    walksIds: [ID!] @external
+    walks: [Walk!]!
+}
+
+type Walk @key(fields: "id") {
+    id: ID!
+    name: String
+    description: String
+    time: String
+}

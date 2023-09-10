@@ -1,0 +1,10 @@
+type Query {
+    owner(id: ID!): Owner
+    owners: [Owner]
+}
+
+type Owner @key(fields: "petsIds") {
+    id: ID!
+    name: String
+    petsIds: [ID!]
+}
